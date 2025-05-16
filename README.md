@@ -1,6 +1,11 @@
 # 🧠 Brain Tumor Auto-Segmentation for MRI using 3D U-Net
+![alt text](<images/Screenshot (73).png>)
+*Fig 1.0 sample 01 Brain tumor MRI scan segmentation by the model*
 
-..........MRI Segmentation Example..............
+
+![alt text](<images/Screenshot (72).png>)
+*Fig 1.1 sample 02 Brain tumor MRI scan segmentation by the model*
+
 
 ## Overview
 This project implements a deep learning model based on the 3D U-Net architecture for automatic segmentation of brain tumors in MRI scans. The model identifies and classifies three distinct tumor sub-regions:
@@ -30,7 +35,7 @@ This project utilizes data from the **Medical Segmentation Decathlon (MSD) MICCA
 
 * **Non-Enhancing Tumor Core:** Label **1**
 * **Edema:** Label **2**
-* **Enhancing Tumor:** Label **4**
+* **Enhancing Tumor:** Label **3**
 
 ## 🧠 Model Architecture
 **Base Model:** 3D U-Net
@@ -63,7 +68,7 @@ The model was trained with the following configuration:
 * **Batch Size:** 8
   
 
-##📊 Results
+## 📊 Results
 
 The model achieved the following performance metrics during training and validation:
 
@@ -87,38 +92,26 @@ The model achieved the following performance metrics during training and validat
 The following visualizations from TensorBoard illustrate the training progress of the Dice Coefficient and Loss for both the training and validation datasets, as well as the evaluation Dice Coefficient and Loss over iterations:
 
 **Epoch Dice Coefficient:**
-
-![Epoch Dice Coefficient](link_to_your_image1.png)
+![alt text](images/dice_coefficeint_vs_epoch.png)
+*Fig 2.0 Dice coefficients generally increase over the epochs for both train and validation datasets, which is a positive sign indicating that the model is learning to better segment the tumor regions.*  
 
 **Epoch Loss:**
-
-![Epoch Loss](link_to_your_image2.png)
+![alt text](images/dice_loss_vs_epoch.png)
+*Fig 2.1 Tran and validation dice losses both decrease over the epochs, which is expected as the model learns to minimize the segmentation errors.*  
 
 **Evaluation Dice Coefficient vs. Iterations:**
+![alt text](images/eval_dice_coeff_vs_iterations.png)
+*Fig 2.1 there are noticeable ups and downs, suggesting variability in the evaluation performance across different iterations. The highest validation Dice coefficients seem to be achieved around the middle to later stages of training.*
 
-![Evaluation Dice Coefficient vs. Iterations](link_to_your_image3.png)
 
 **Evaluation Loss vs. Iterations:**
-
-![Evaluation Loss vs. Iterations](link_to_your_image4.png)
-
-*Note: Please replace the `link_to_your_imageX.png` placeholders with the actual links or paths to your uploaded images within your GitHub repository.*
+![alt text](images/eval_loss_vs_iteration.png)
+*Fig 2.2 generally show a decreasing trend in validation loss over iterations, indicating improvement.*
 
 
 
-## Training Details
-
-* **Training Strategy:** Patch-based training with sub-volume sampling.
-* **Loss Function:** Soft Dice Loss.
-* **Optimizer:** *(Specify your optimizer, e.g., Adam, SGD)*
-* **Learning Rate:** *(Specify your initial learning rate and any scheduling used)*
-* **Epochs:** *(Specify the number of training epochs)*
-* **Batch Size:** *(Specify the batch size used during training)*
-* **Hardware:** NVIDIA T4 GPU.
 
 ## Getting Started
-
-**(Provide clear and concise instructions on how to set up and run your project. This might include:**
 
 1.  **Prerequisites:**
     * Python 3.10
@@ -135,10 +128,9 @@ The following visualizations from TensorBoard illustrate the training progress o
 2.  **Dataset Setup:**
   * Get the data at [Medical Segmentation Decathlon](https://decathlon-10.grand-challenge.org/)  
 
-4.  **Running the Code:** Provide commands to train the model, evaluate it, or run inference on new data.
+3.  **Running the Code:** Provide commands to train the model, evaluate it, or run inference on new data.
 
     ```bash
-    # Sample Inference Script
     from tensorflow.keras.models import load_model
     
     # Define custom objects
@@ -180,13 +172,13 @@ Building upon the current results, future work will focus on several key areas t
 
 ## License
 
-This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
+This project is licensed under the **MIT License**.
 
 ## Acknowledgements
 
 * The authors of the **"3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation"** paper for their foundational work.
 * The organizers of the **DECATHLON 10** challenge for providing the valuable dataset.
-* The developers of **PyTorch** and other open-source libraries used in this project.
+* The developers of **Tensorflow** and other open-source libraries used in this project.
 
 ## Contact
 
