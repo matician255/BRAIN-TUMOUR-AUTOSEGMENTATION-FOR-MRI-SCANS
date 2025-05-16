@@ -11,12 +11,12 @@ This project implements a deep learning model based on the 3D U-Net architecture
 ⚕️ This work contributes to the growing field of AI-assisted radiology by supporting more accurate and efficient tumor detection, treatment planning  and monitoring of brain tumors.
 
 
-##📄 Project Ispiration
+## 📄 Project Ispiration
 This project is inspired by the paper:
 3D U-Net: Learning Dense Volumetric Segmentation from Sparse Annotation
 by Özgün Çiçek, Ahmed Abdulkadir, Soeren S. Lienkamp, Thomas Brox, and Olaf Ronneberger.
 
-##🗂️ Dataset
+## 🗂️ Dataset
 This project utilizes data from the **Medical Segmentation Decathlon (MSD) MICCAI BraTS 2021 - Task 01 (Brain Tumor)** dataset.
 
 **Modality:** The dataset consists of **multi-modal MRI** scans, including the following sequences:
