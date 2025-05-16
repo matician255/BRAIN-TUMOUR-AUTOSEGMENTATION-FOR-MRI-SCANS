@@ -32,7 +32,7 @@ This project utilizes data from the **Medical Segmentation Decathlon (MSD) MICCA
 * **Edema:** Label **2**
 * **Enhancing Tumor:** Label **4**
 
-##🧠 Model Architecture
+## 🧠 Model Architecture
 **Base Model:** 3D U-Net
 
 **Key Techniques Employed:**
